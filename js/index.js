@@ -1,6 +1,7 @@
 $(function(){
 	$('#email-form').submit(function () {
 		submit_click();
+		$("#form-container").hide();
 		return false;
 	});
 });
@@ -19,4 +20,5 @@ function submit_click() {
 		$("#form-result").addClass("error");
 		$("#form-result").text("Oops! Something went wrong. Please try again later.");
 	});
+
 }
