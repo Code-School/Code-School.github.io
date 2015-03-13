@@ -1,7 +1,86 @@
-body {
+/* =======================================================================
+Code School - App Landing Page 
+======================================================================= */
+
+
+/*
+1. GLOBAL STYLES
+2. TYPOGRAPHY
+     2.1 FONTS
+     2.2 HEADINGS
+3. LAYOUT
+	 3.1 CONTACT
+	 3.4 SOCIAL ICONS
+4. ELEMENTS
+	 4.1 ICONS
+*/
+
+/* --------------------------------------
+GLOBAL STYLES
+-----------------------------------------*/
+html, body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
+a {
+    color: #111;
+    text-decoration: none;
+}
+strong { font-family: 'walkway_ultraboldregular' }
+body {
+    background: url(../images/bg.jpg);
+    background-size: cover;
+    color: #111;
+    font-family: Open Sans;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+/*---------------------------------------
+   TYPOGRAPHY                
+-----------------------------------------*/
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'walkway_semiboldregular';
+    src: url('../fonts/Walkway_SemiBold-webfont.eot');
+    src: url('../fonts/Walkway_SemiBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Walkway_SemiBold-webfont.woff') format('woff'), url('../fonts/Walkway_SemiBold-webfont.ttf') format('truetype'), url('../fonts/Walkway_SemiBold-webfont.svg#walkway_semiboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'walkway_ultraboldregular';
+    src: url('../fonts/Walkway_UltraBold-webfont.eot');
+    src: url('../fonts/Walkway_UltraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Walkway_UltraBold-webfont.woff') format('woff'), url('../fonts/Walkway_UltraBold-webfont.ttf') format('truetype'), url('../fonts/Walkway_UltraBold-webfont.svg#walkway_ultraboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3 {
+    color: #111;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: normal;
+    font-family: 'walkway_semiboldregular';
+    line-height: 1.2;
+    margin-top: 20px;
+}
+h4,
+h5,
+h6 { font-weight: 400 }
+
+/*---------------------------------------
+   LAYOUT          
+-----------------------------------------*/
 
 #bg {
 	position: fixed;
@@ -37,6 +116,7 @@ body {
 	position: relative;
 	padding-top: 3%;
 	text-align: center;
+	
 }
 
 p {
@@ -50,6 +130,8 @@ p.tagline {
 	color: #ccc;
 	margin: 5px 0;
 }
+
+/* CONTACT*/
 
 #form-container {
 	position: relative;
@@ -69,6 +151,8 @@ p.tagline {
 	border: none;
 	outline: none;
 	background:#fff;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
 #form-container input[type="submit"]{
@@ -84,6 +168,8 @@ p.tagline {
 	width:30%;
 	font-size:20px;
 	font-weight: bold;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 #form-container input[type="submit"]:hover, #form-container input[type="submit"]:focus {
@@ -100,4 +186,73 @@ p.tagline {
 
 #form-result.error {
 	color: #f33;
+}
+
+/*Social Icons*/
+
+#social-icons {
+    position: fixed;
+    bottom: 2%;
+}
+#social-icons ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#social-icons li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+#social-icons a {
+    font-size: 28px;
+    color: #111;
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+#social-icons a i {
+    font-style: normal;
+    font-weight: normal;
+    opacity: 1;
+    display: block;
+    font-variant: normal;
+    font-size: 13px;
+    border: 1px solid #111;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 27px;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+#social-icons a:hover i {
+    border: 1px solid #E02217;
+    color: #E02217;
+
+    /*icons 
+    Check full icon list http://appsperia.themetek.com/demo1/fonts/flaticon.html
+    */
+
+.icon {
+    font-weight: normal;
+    line-height: 20px;
+    margin-right: 5px;
+}
+.clients-content .icon,
+.tabs .icon,
+.features .icon { color: #E02217 }
+.simple-button .icon {
+    margin-right: 20px;
+    font-size: 18px;
+}
 }
