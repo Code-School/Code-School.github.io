@@ -3,22 +3,26 @@
 	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Code School - Coming Soon!</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 	</head>
 	<body>
 		<div id="bg"></div>
 		<div id="logo">
-			<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+			<img src="img/logo.png" alt="logo">
 		</div>
+		<div id="main-block-bg"></div>
 		<div id="main-block">
 			<p>Something good is headed your way!</p>
 			<p class="tagline">Code School is coming soon.</p>
 			<p class="tagline">Enter your email below to be notified when it's ready.</p>
 			<div id="form-container">
-				<form id="contact-form" action="#" method="post">
-					<input type="email" required placeholder="Enter your email address" tabindex="1">
+				<form id="email-form" action="#" method="post">
+					<input id="email_text" type="email" required placeholder="Enter your email address" tabindex="1">
 					<input type="submit" name="submit" id="contact-submit" value="Subscribe">
 				</form>
 			</div>
+			<p id="form-result"></p>
 		</div>
 	</body>
 </html>
